@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExternalLibraries</string>
+    <string name="content_description">Image from external hyperlink</string>
+    <string name="hint">Link to image</string>
 </resources>
