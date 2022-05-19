@@ -9,18 +9,34 @@
     android:paddingEnd="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:hint="@string/hint"
-        android:importantForAutofill="no"
-        android:inputType="textUri"
-        android:textCursorDrawable="@color/colorPrimary"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="@string/hint"
+            android:importantForAutofill="no"
+            android:inputType="textUri"
+            android:textCursorDrawable="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/text"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
@@ -33,5 +49,5 @@
         app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
